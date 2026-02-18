@@ -13,17 +13,16 @@ export default function Hero() {
       </div>
 
       <Container className="relative flex flex-col items-center gap-10">
-        {/* Logo mark — on a frosted light backing so the navy shows clearly */}
-        <div className="flex items-center justify-center rounded-2xl bg-white/90 px-10 py-8 shadow-[0_0_60px_rgba(26,52,97,0.4)]">
-          <Image
-            src={site.logos.hero}
-            alt={site.name}
-            width={200}
-            height={200}
-            className="h-32 w-auto object-contain"
-            priority
-          />
-        </div>
+        {/* Logo mark — screen blend dissolves the dark PNG background into the site bg */}
+        <Image
+          src={site.logos.hero}
+          alt={site.name}
+          width={400}
+          height={400}
+          className="h-56 w-auto object-contain sm:h-64 lg:h-72"
+          style={{ mixBlendMode: "screen" }}
+          priority
+        />
 
         {/* Divider */}
         <div className="flex items-center gap-4">

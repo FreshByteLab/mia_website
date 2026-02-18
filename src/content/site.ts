@@ -1,3 +1,21 @@
+/**
+ * THE MARK — Logo symbolism reference
+ * ─────────────────────────────────────────────────────────────
+ * Aperture (outer ring)
+ *   A camera aperture controls what light enters the frame — with
+ *   precision and intent. → Disciplined, targeted market exposure.
+ *
+ * Bull (inner negative space)
+ *   Inside the aperture, the form of a bull emerges.
+ *   → Constructive conviction. Fundamentally bullish on markets.
+ *
+ * Three triangles → M · I · A (straddle payoff diagram)
+ *   The three triangles spell the initials AND trace the payoff
+ *   of a straddle options strategy — profits from large moves in
+ *   EITHER direction. → Volatility-aware, asymmetric positioning.
+ * ─────────────────────────────────────────────────────────────
+ */
+
 export const site = {
   name: "Maverick Investment Aperture",
   shortName: "MIA",
