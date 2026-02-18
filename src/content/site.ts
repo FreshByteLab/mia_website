@@ -1,9 +1,9 @@
 export const site = {
   name: "Maverick Investment Aperture",
   shortName: "MIA",
-  tagline: "Independent conviction. Disciplined execution.",
+  tagline: "Precision exposure. Decisive conviction.",
   description:
-    "An independent investment firm built on contrarian research, rigorous risk management, and a long-term perspective.",
+    "An independent investment firm built on contrarian research, rigorous risk management, and a volatility-aware approach to generating durable, risk-adjusted returns.",
 
   nav: [
     { label: "About", href: "#about", id: "about" },
@@ -14,26 +14,26 @@ export const site = {
   hero: {
     headline: "Maverick\nInvestment\nAperture",
     subheadline:
-      "Precision exposure to exceptional opportunity. We combine independent research with disciplined risk management to generate durable, risk-adjusted returns.",
+      "Like a camera aperture, we control what enters the frame — with precision, intent, and a clear view of the opportunity ahead.",
     cta: { label: "Get in Touch", href: "#contact" },
     ctaSecondary: { label: "Our Approach", href: "#about" },
   },
 
   about: {
     headline: "About",
-    body: "Maverick Investment Aperture is an independent investment firm guided by contrarian conviction, quantitative rigour, and an unwavering focus on capital preservation. We approach markets with a long-term lens, selecting only the opportunities where our edge is clear and the risk is well-understood.",
+    body: "Our mark encodes our philosophy. The aperture — a precision opening that controls what light enters — represents our disciplined approach to market exposure. Inside it, the form of a bull signals our constructive conviction: we believe markets reward those who act with clarity and courage. The three triangles that spell M·I·A trace the payoff of a straddle — a structure that profits from decisive moves in either direction. Together they express an investment approach that is precise, convicted, and volatility-aware.",
     pillars: [
       {
-        title: "Independence",
-        text: "Free from institutional constraints, we pursue conviction-driven ideas that the consensus overlooks.",
+        title: "Aperture",
+        text: "Controlled exposure. We open and close our view on markets with precision — letting in only the opportunities where the risk/reward is unambiguously clear.",
       },
       {
-        title: "Precision",
-        text: "Every position is sized, stress-tested, and monitored with quantitative discipline.",
+        title: "Bull",
+        text: "Constructive conviction. We hold a fundamentally bullish view on human ingenuity and capital markets, expressed through independent, research-driven positions.",
       },
       {
-        title: "Long-term",
-        text: "We invest for compounding — not for quarters — aligning our interests fully with our clients.",
+        title: "Straddle",
+        text: "Volatility-aware positioning. Like a straddle, we are structured to benefit from significant market dislocations — in either direction — rather than being crushed by them.",
       },
     ],
   },
@@ -41,15 +41,15 @@ export const site = {
   services: [
     {
       title: "Portfolio Management",
-      text: "Tailored multi-asset mandates for institutional investors and family offices, with full transparency and rigorous reporting.",
+      text: "Conviction-driven, multi-asset mandates for institutional investors and family offices. Every position is sized with the discipline of a straddle — defined risk, asymmetric upside.",
     },
     {
       title: "Investment Research",
-      text: "Proprietary, bottom-up research driven by independent analysis and quantitative frameworks across asset classes.",
+      text: "Independent, bottom-up research through a quantitative lens. We open the aperture wide enough to see what consensus misses, and close it tight enough to act with precision.",
     },
     {
       title: "Risk Advisory",
-      text: "Portfolio diagnostics, scenario analysis, and risk-adjusted return optimisation for existing portfolios.",
+      text: "Portfolio stress-testing, volatility analysis, and risk-adjusted return optimisation. We help you understand not just the expected return — but the full payoff diagram.",
     },
   ],
 
