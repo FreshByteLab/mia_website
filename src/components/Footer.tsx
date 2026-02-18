@@ -11,7 +11,7 @@ export default function Footer() {
           alt={site.name}
           width={80}
           height={32}
-          className="h-7 w-auto object-contain opacity-50"
+          className="h-7 w-auto object-contain"
         />
         <p>
           © {new Date().getFullYear()} {site.name}. All rights reserved.

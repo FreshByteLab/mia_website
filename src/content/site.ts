@@ -60,8 +60,13 @@ export const site = {
   },
 
   logos: {
-    navbar: "/logos/sideward_white.png",
-    hero: "/logos/Final_white.png",
-    footer: "/logos/final_small_white.png",
+    // Website (dark background) — navy variants
+    navbar: "/logos/sideward_navy.png",
+    hero: "/logos/Final.png",
+    footer: "/logos/final_small.png",
+    // Bright backgrounds (reports, print, light UI)
+    navbarLight: "/logos/sideward_white.png",
+    heroLight: "/logos/Final_white.png",
+    footerLight: "/logos/final_small_white.png",
   },
 };
