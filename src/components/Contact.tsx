@@ -7,8 +7,8 @@ export default function Contact() {
     <section id="contact" className="py-28">
       <Container>
         <div className="mb-14 flex items-center gap-4">
-          <span className="h-px w-10 bg-white/30" />
-          <span className="text-xs uppercase tracking-[0.4em] text-white/40">
+          <span className="h-px w-10 bg-accent/40" />
+          <span className="text-xs uppercase tracking-[0.4em] text-accent/60">
             {site.contact.headline}
           </span>
         </div>

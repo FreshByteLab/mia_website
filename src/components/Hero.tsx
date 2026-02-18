@@ -7,33 +7,31 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden py-32 text-center">
       {/* Soft glow behind logo */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 flex items-center justify-center"
-      >
-        <div className="h-96 w-96 rounded-full bg-accent/5 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center">
+        <div className="h-[600px] w-[600px] rounded-full bg-navy/20 blur-[120px]" />
+        <div className="absolute h-72 w-72 rounded-full bg-accent/10 blur-3xl" />
       </div>
 
       <Container className="relative flex flex-col items-center gap-10">
-        {/* Logo mark */}
-        <div className="flex items-center justify-center">
+        {/* Logo mark — on a frosted light backing so the navy shows clearly */}
+        <div className="flex items-center justify-center rounded-2xl bg-white/90 px-10 py-8 shadow-[0_0_60px_rgba(26,52,97,0.4)]">
           <Image
             src={site.logos.hero}
             alt={site.name}
             width={200}
             height={200}
-            className="h-40 w-auto object-contain"
+            className="h-32 w-auto object-contain"
             priority
           />
         </div>
 
         {/* Divider */}
         <div className="flex items-center gap-4">
-          <span className="h-px w-12 bg-white/20" />
-          <span className="text-xs uppercase tracking-[0.4em] text-white/40">
+          <span className="h-px w-12 bg-accent/30" />
+          <span className="text-xs uppercase tracking-[0.4em] text-accent/60">
             {site.shortName}
           </span>
-          <span className="h-px w-12 bg-white/20" />
+          <span className="h-px w-12 bg-accent/30" />
         </div>
 
         {/* Tagline */}
