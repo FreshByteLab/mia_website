@@ -20,7 +20,6 @@ export default function Hero() {
           width={400}
           height={400}
           className="h-56 w-auto object-contain sm:h-64 lg:h-72"
-          style={{ mixBlendMode: "screen" }}
           priority
         />
 

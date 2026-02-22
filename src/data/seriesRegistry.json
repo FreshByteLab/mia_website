@@ -1,0 +1,34 @@
+[
+  {
+    "id": "global_equities_usd",
+    "name": "Global Equities",
+    "assetClass": "Equities",
+    "currency": "USD",
+    "frequency": "monthly",
+    "source": "Synthetic sample data (MIA research MVP)"
+  },
+  {
+    "id": "global_gov_bonds_usd",
+    "name": "Global Government Bonds",
+    "assetClass": "Government Bonds",
+    "currency": "USD",
+    "frequency": "monthly",
+    "source": "Synthetic sample data (MIA research MVP)"
+  },
+  {
+    "id": "global_ig_credit_usd",
+    "name": "Global Investment Grade Credit",
+    "assetClass": "Investment Grade Credit",
+    "currency": "USD",
+    "frequency": "monthly",
+    "source": "Synthetic sample data (MIA research MVP)"
+  },
+  {
+    "id": "chf_gov_bonds_chf",
+    "name": "CHF Government Bonds",
+    "assetClass": "Government Bonds",
+    "currency": "CHF",
+    "frequency": "monthly",
+    "source": "Synthetic sample data (MIA research MVP)"
+  }
+]

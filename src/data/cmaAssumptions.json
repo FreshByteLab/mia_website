@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-02-20T10:27:31.185Z",
+  "note": "Long-run expected return and volatility assumptions are placeholders for MVP.",
+  "bySeries": {
+    "global_equities_usd": {
+      "expectedReturn": 0.072,
+      "expectedVol": 0.165,
+      "carry": 0.017,
+      "rolldown": 0,
+      "spread": 0,
+      "expectedLoss": -0.005,
+      "fxImpact": 0.002
+    },
+    "global_gov_bonds_usd": {
+      "expectedReturn": 0.034,
+      "expectedVol": 0.075,
+      "carry": 0.021,
+      "rolldown": 0.007,
+      "spread": 0,
+      "expectedLoss": -0.001,
+      "fxImpact": 0.001
+    },
+    "global_ig_credit_usd": {
+      "expectedReturn": 0.046,
+      "expectedVol": 0.095,
+      "carry": 0.026,
+      "rolldown": 0.005,
+      "spread": 0.01,
+      "expectedLoss": -0.003,
+      "fxImpact": 0.0015
+    },
+    "chf_gov_bonds_chf": {
+      "expectedReturn": 0.021,
+      "expectedVol": 0.05,
+      "carry": 0.014,
+      "rolldown": 0.003,
+      "spread": 0,
+      "expectedLoss": -0.001,
+      "fxImpact": 0
+    }
+  },
+  "baseCorrelation": {
+    "global_equities_usd": {
+      "global_equities_usd": 1,
+      "global_gov_bonds_usd": 0.22,
+      "global_ig_credit_usd": 0.58,
+      "chf_gov_bonds_chf": 0.1
+    },
+    "global_gov_bonds_usd": {
+      "global_equities_usd": 0.22,
+      "global_gov_bonds_usd": 1,
+      "global_ig_credit_usd": 0.44,
+      "chf_gov_bonds_chf": 0.72
+    },
+    "global_ig_credit_usd": {
+      "global_equities_usd": 0.58,
+      "global_gov_bonds_usd": 0.44,
+      "global_ig_credit_usd": 1,
+      "chf_gov_bonds_chf": 0.31
+    },
+    "chf_gov_bonds_chf": {
+      "global_equities_usd": 0.1,
+      "global_gov_bonds_usd": 0.72,
+      "global_ig_credit_usd": 0.31,
+      "chf_gov_bonds_chf": 1
+    }
+  }
+}

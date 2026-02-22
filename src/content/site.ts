@@ -24,9 +24,10 @@ export const site = {
     "An independent investment firm built on contrarian research, rigorous risk management, and a volatility-aware approach to generating durable, risk-adjusted returns.",
 
   nav: [
-    { label: "About", href: "#about", id: "about" },
     { label: "Services", href: "#services", id: "services" },
+    { label: "Modelportfolio", href: "#modelportfolio", id: "modelportfolio" },
     { label: "Contact", href: "#contact", id: "contact" },
+    { label: "About", href: "#about", id: "about" },
   ],
 
   hero: {
@@ -71,6 +72,50 @@ export const site = {
     },
   ],
 
+  modelPortfolio: {
+    headline: "Modelportfolio",
+    body: "Our model portfolios are a transparent expression of our process. Each model is rules-based, risk-aware, and built to capture asymmetric opportunities across market regimes.",
+    portfolios: [
+      {
+        name: "Core Model",
+        profile: "Balanced Exposure",
+        description:
+          "A diversified global mix designed for steady compounding with disciplined downside controls.",
+      },
+      {
+        name: "Growth Model",
+        profile: "Higher Conviction",
+        description:
+          "A concentrated allocation focused on thematic opportunities with active risk overlays.",
+      },
+      {
+        name: "Defensive Model",
+        profile: "Capital Preservation",
+        description:
+          "A lower-volatility posture prioritizing drawdown protection while retaining selective upside.",
+      },
+    ],
+    attribution: {
+      headline: "Attribution",
+      subsections: [
+        {
+          id: "performance",
+          label: "performance",
+          title: "Performance",
+          description:
+            "Performance attribution decomposes returns by allocation, selection, and timing effects to identify where value-add was generated.",
+        },
+        {
+          id: "risk",
+          label: "risk",
+          title: "Risk",
+          description:
+            "Risk attribution isolates volatility, drawdown, and factor contributions to show how each sleeve impacts total portfolio risk.",
+        },
+      ],
+    },
+  },
+
   contact: {
     email: "info@maverickinvestmentaperture.com",
     headline: "Contact",
@@ -80,7 +125,7 @@ export const site = {
   logos: {
     // Website (dark background) — navy variants
     navbar: "/logos/sideward_navy.png",
-    hero: "/logos/Final.png",
+    hero: "/logos/Final_transparent.png",
     footer: "/logos/final_small.png",
     // Bright backgrounds (reports, print, light UI)
     navbarLight: "/logos/sideward_white.png",

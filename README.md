@@ -78,3 +78,45 @@ src/
     cn.ts
 public/logos/          # All MIA logo variants
 ```
+
+---
+
+## Research Section
+
+The site includes a dedicated `Research` area under:
+
+- `/research` (landing)
+- `/research/ex-ante` (Capital Market Assumptions)
+- `/research/ex-post` (Historical Risk & Return)
+- `/research/methodology` (calculation conventions)
+
+### Data layout
+
+- Series registry: `src/data/seriesRegistry.json`
+- Price data (monthly): `src/data/prices/*.json`
+- FX rates: `src/data/fxRates.json`
+- Ex-ante assumptions: `src/data/cmaAssumptions.json`
+
+### Add a new series
+
+1. Add metadata in `src/data/seriesRegistry.json`.
+2. Add monthly price history in `src/data/prices/<series_id>.json`.
+3. Register the new price file in `src/lib/data/getPrices.ts`.
+4. Add optional CMA assumptions in `src/data/cmaAssumptions.json`.
+
+### Plug in real data sources
+
+- Replace JSON-backed access functions:
+  - `src/lib/data/getSeries.ts`
+  - `src/lib/data/getPrices.ts`
+- Keep the response contracts unchanged so API/UI layers continue to work:
+  - `src/types/research.ts`
+  - `src/app/api/research/ex-ante/route.ts`
+  - `src/app/api/research/ex-post/route.ts`
+
+### Conventions (current MVP)
+
+- Frequency: monthly by default
+- Annualization: geometric return, volatility scaled by `sqrt(12)`
+- Sharpe: `rf = 0`
+- Hedging: hedge ratio reduces FX return exposure linearly; hedge carry cost is set to `0` in MVP

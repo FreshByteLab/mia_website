@@ -26,6 +26,11 @@ export const metadata: Metadata = {
   title: "Maverick Investment Aperture",
   description:
     "Independent conviction. Disciplined execution. Maverick Investment Aperture is an independent investment firm built on contrarian research and rigorous risk management.",
+  icons: {
+    icon: "/logos/Final_transparent.png",
+    shortcut: "/logos/Final_transparent.png",
+    apple: "/logos/Final_transparent.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

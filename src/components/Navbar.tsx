@@ -1,15 +1,27 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { site } from "@/content/site";
 import { cn } from "@/lib/cn";
 import Container from "@/components/ui/Container";
 
 const sectionIds = site.nav.map((item) => item.id);
+const RESEARCH_NAV = { id: "research", label: "Research", href: "/research" };
 
 export default function Navbar() {
-  const [active, setActive] = useState("");
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const navItems = [
+    RESEARCH_NAV,
+    ...site.nav.map((item) => ({
+      ...item,
+      href: isHome ? item.href : `/${item.href}`,
+    })),
+  ];
+
+  const [activeSection, setActiveSection] = useState("");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -19,6 +31,8 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    if (!isHome) return;
+
     const elements = sectionIds
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => Boolean(el));
@@ -34,14 +48,20 @@ export default function Navbar() {
           else visibleSet.delete(entry.target.id);
         });
         const first = sectionIds.find((id) => visibleSet.has(id));
-        if (first) setActive(first);
+        if (first) setActiveSection(first);
       },
       { rootMargin: "-20% 0px -35% 0px", threshold: 0 }
     );
 
     elements.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, []);
+  }, [isHome, pathname]);
+
+  const active = isHome
+    ? activeSection
+    : pathname.startsWith("/research")
+      ? RESEARCH_NAV.id
+      : "";
 
   return (
     <header
@@ -54,7 +74,7 @@ export default function Navbar() {
     >
       <Container className="flex h-16 items-center justify-between gap-6">
         {/* Logo */}
-        <a href="#top" className="flex-shrink-0">
+        <a href={isHome ? "#top" : "/"} className="flex-shrink-0">
           <Image
             src={site.logos.navbar}
             alt={site.name}
@@ -67,7 +87,7 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 text-xs uppercase tracking-widest text-white/60 md:flex">
-          {site.nav.map((item) => (
+          {navItems.map((item) => (
             <a
               key={item.id}
               href={item.href}
@@ -87,16 +107,16 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Mobile — active section pill */}
+        {/* Mobile active section pill */}
         <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/60 md:hidden">
-          {site.nav.find((item) => item.id === active)?.label ?? "Menu"}
+          {navItems.find((item) => item.id === active)?.label ?? "Menu"}
         </span>
       </Container>
 
       {/* Mobile nav row */}
       <div className="border-t border-white/5 md:hidden">
         <Container className="flex gap-3 overflow-x-auto py-3">
-          {site.nav.map((item) => (
+          {navItems.map((item) => (
             <a
               key={item.id}
               href={item.href}
