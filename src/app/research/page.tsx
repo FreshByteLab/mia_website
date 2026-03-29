@@ -33,10 +33,11 @@ export default function ResearchPage() {
 
         <Link href="/research/ex-post" className="glass-panel glass-panel-hover block p-7">
           <p className="mb-2 text-xs uppercase tracking-[0.28em] text-accent/60">Ex-Post</p>
-          <h2 className="font-display text-2xl text-white">Historical Risk &amp; Return</h2>
+          <h2 className="font-display text-2xl text-white">Historical Risk &amp; Return Analysis</h2>
           <p className="mt-3 text-sm leading-relaxed text-white/60">
-            Analyze realized returns, volatility, drawdowns, and rolling risk across custom windows
-            with downloadable outputs.
+            Analyze realized returns, volatility, drawdowns, and time-dependent uni- and
+            multivariate risk analysis across customizable sample windows with downloadable
+            outputs.
           </p>
         </Link>
       </div>
